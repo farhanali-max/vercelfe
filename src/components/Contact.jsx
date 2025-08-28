@@ -12,7 +12,7 @@ const Contact = () => {
     e.preventDefault();
     await axios
       .post(
-        "http://localhost:4000/api/v1/message/send",
+        "https://vercelbe-six.vercel.app/api/v1/message/send",
         {
           name,
           email,
@@ -32,7 +32,7 @@ const Contact = () => {
         setSubject("");
       })
       .catch((error) => {
-        toast.error(error.response.data.message);
+        toast.error(error.response?.data?.message || "Something went wrong");
       });
   };
 
