@@ -12,7 +12,7 @@ const Contact = () => {
     e.preventDefault();
     await axios
       .post(
-        "vercelbe-six.vercel.app/api/v1/message/send",
+        "https://vercelbe-six.vercel.app/api/v1/message/send",
         {
           name,
           email,
